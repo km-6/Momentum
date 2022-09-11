@@ -1,1 +1,118 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="xeicon/xeicon.min.css">
+</head>
+<body>
+    <div id="background-image"></div>
+    <div class="container">        
+        <form id="login-form"class="hidden">
+            <p>What is your name?</p>
+            <input required maxlength="15" type="text" >
+            <button>Enter</button>
+        </form>
+        <button id="logout" class="hidden"><i class="xi-log-out"></i>logout</button>
+        <div id="content-wrap" class="hidden"> 
+            <div class="content">
+                <div class="head-section">
+                    <div id="now">
+                        <div class="icon"><i class="xi-calendar-check"></i></div>
+                        <div class="date">
+                            <h3 id="day"></h3>
+                            <h2 id="clock">00:00:00</h2>
+                        </div>
+                    </div>
+                    <div class="quick-menu">
+                        <ul>
+                            <li>
+                                <a href="https://www.google.co.kr/" target="_blank"><i class="xi-google"></i> GOOGLE</a>
+                            </li>
+                            <li>
+                                <a href="https://www.apple.com/" target="_blank"><i class="xi-apple"></i> APPLE</a>
+                            </li>
+                            <li>
+                                <a href="https://www.naver.com/" target="_blank"><i class="xi-naver"></i> NAVER</a>
+                            </li>
+                            <li>
+                                <a href="https://nomadcoders.co" target="_blank"><img src="https://nomadcoders.co/m.svg" alt="nomadcoders"> NOMADCODER</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="body-section">
+                    <div class="write-todo">
+                        <h2 class="title">To do List</h2>
+                        <form action="" id="todo-form">
+                            <div class="category">
+                                <label class="todo-category" for="cate1">
+                                    <input type="radio" value="WORK" name="category" id="cate1">
+                                    <span></span>
+                                    <p>WORK</p>
+                                </label>
+                                <label class="todo-category" for="cate2">
+                                    <input type="radio" value="STUDY" name="category" id="cate2">
+                                    <span></span>
+                                    <p>STUDY</p>
+                                </label>
+                                <label class="todo-category" for="cate3">
+                                    <input type="radio" value="HOBBY" name="category" id="cate3">
+                                    <span></span>
+                                    <p>HOBBY</p>
+                                </label>
+                            </div>
+                            <input type="text" class="text" placeholder="Write a To Do and Press Enter" required/>
+                            <textarea class="memo" placeholder="If you have something to write down, write it down"></textarea>
+                            <button>Enter</button>
+                        </form>
+                    </div>
+                    <div class="view-todo">
+                        <ul id="todo-list"></ul>
+                    </div>
+                </div>
+            </div>
+            <aside>      
+                <div id="login-content">
+                    <h1 id="greeting"></h1>  
+                    <div class="today-mood">
+                        <p>Today's Mood is</p>     
+                        <form id="mood-form">
+                            <select name="" id="">
+                                <option value="HAPPY">HAPPY</option>
+                                <option value="GOOD">GOOD</option>
+                                <option value="SHOCK">SHOCK</option>
+                                <option value="SAD">SAD</option>
+                                <option value="ANGRY">ANGRY</option>
+                                <option value="EXCELLENT">EXCELLENT</option>
+                            </select>
+                            <button id="mood-enter">Enter</button>
+                        </form> 
+                        <h2 id="mood-view"></h2>
+                        <button id="mood-reset" class="hidden">Reset</button> 
+                    </div>           
+                </div>
+                <div id="weather">
+                    <p class="city"></p>
+                    <div class="">
+                        <span class="temp"></span>
+                        <span class="weather"></span>
+                    </div>
+                </div>
+            </aside>  
+        </div>
+    </div>
+    
+
+    <script src="js/background.js"></script>
+    <script src="js/mood.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/logout.js"></script>
+</body>
+</html>
